@@ -1,0 +1,14 @@
+.FooterTop-container{
+    background-color: black;
+    overflow: hidden;
+}
+.footerTop-single{
+    padding: 40px;
+}
+.footerTop-single h2{
+    color: white;
+    font-weight: bold;
+}
+.footerTop-single p{
+    color: white;
+}

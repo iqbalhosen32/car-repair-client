@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-brand{
+  background-color: #C8243E;
+  color: white;
+  padding: 0px 30px;
+  
+}
+.btn-all{
+  background-color: #C8243E;
+  color: white;
+  padding: 10px 30px;
+}
+.container-style{
+  background-color: #262626;
+}

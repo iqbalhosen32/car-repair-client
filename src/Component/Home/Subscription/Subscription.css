@@ -1,0 +1,34 @@
+.subscription-container {
+    background-image: url('../../../Images/cover41.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.subscription-wrapper {
+    height: 300px;
+    padding: 50px;
+
+}
+
+.subscription-wrapper h2{
+    font-weight: bold;
+}
+
+.mail-section input{
+    border: 1px solid #8e8e8e;
+    width: 450px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.mail-section button{
+    border: none;
+    padding: 11px 30px;
+    background-color: #C8243E;
+    color: white;
+    font-weight: bold;
+}
+.mail-section button:hover{
+    background-color: #858585;
+}

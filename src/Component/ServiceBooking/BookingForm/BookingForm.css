@@ -1,0 +1,12 @@
+input{
+    width: 300px;
+    margin: 5px;
+    padding: 7px 15px;
+    border: none;
+    border: 1px solid #E9E8E9;
+    border-radius: 5px;
+}
+.modal-container{
+    opacity: 0.9;
+    background: #000;
+}

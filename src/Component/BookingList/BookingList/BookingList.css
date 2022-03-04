@@ -1,0 +1,12 @@
+.logo{
+    width: 50px;
+}
+.list-container{
+    background-color: #262626;
+}
+.single-list{
+    background-color: #000;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 10px;
+}

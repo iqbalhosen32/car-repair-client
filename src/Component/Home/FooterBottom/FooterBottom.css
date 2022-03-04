@@ -1,0 +1,7 @@
+.FooterBottom-container{
+    height: 100px;
+    background-color: black;
+    color: white;
+    border-top: 1px solid #8e8e8e;
+    padding-top: 10px;
+}

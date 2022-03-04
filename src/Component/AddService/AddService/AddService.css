@@ -1,0 +1,12 @@
+.add-service-container{
+    background-color: #262626;
+}
+.add-service{
+    background-color: #000;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+.input-style{
+    width: 300px;
+} 

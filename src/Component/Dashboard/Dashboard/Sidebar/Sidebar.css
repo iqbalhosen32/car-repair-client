@@ -1,0 +1,21 @@
+.sidebar-container{
+    background-color: #000;
+    height: 800px;
+}
+.sidebar-container ul{
+    margin-top: 80px;
+}
+.sidebar-container ul li{
+    margin: 15px;
+    padding: 10px 0;
+}
+
+.text-style, .text-style:hover{
+    color: #fff;
+}
+
+
+.sidebar-container li:hover span{
+    display: inline-block;
+    transform: translate(5px);
+}
