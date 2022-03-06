@@ -14,7 +14,7 @@ const Dashboard = ({ bookListByEmail }) => {
                     <h6 className="text-white m-3">Service List</h6>
                     <div className="row">
                         {
-                            bookListByEmail.map(serviceList => <SingleBookingList bookListByEmail={bookListByEmail}></SingleBookingList>)
+                            bookListByEmail.map(bookListByEmail => <SingleBookingList bookListByEmail={bookListByEmail}></SingleBookingList>)
                         }
                     </div>
                 </div>

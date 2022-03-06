@@ -2,6 +2,8 @@ import React from 'react';
 import './BookingForm.css'
 import Modal from 'react-modal';
 import { useForm } from "react-hook-form";
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const customStyles = {
     content: {
@@ -34,9 +36,17 @@ const BookingForm = ({ modalIsOpen, closeModal, serviceName, value }) => {
         .then(res => res.json())
         .then(result => {
             closeModal()
-            alert('Thank You... Your Service Book Successfully')
+            notify()
         })
 
+    }
+
+    toast.configure()
+
+    const notify = ()=>{
+ 
+        // Calling toast method by passing string
+        toast('Hello Geeks', {position: toast.POSITION.TOP_CENTER})
     }
     return (
         <div className="modal-container">

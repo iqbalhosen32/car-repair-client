@@ -46,6 +46,8 @@ const Sidebar = () => {
             })
     }, [])
 
+    
+
     return (
         <div className="sidebar d-flex flex-column">
             <div className="sidebar-container">
@@ -111,9 +113,7 @@ const Sidebar = () => {
                             <FontAwesomeIcon icon={faCommentDots} /> <span className="">Review</span>
                         </Link>
                     </li>
-
                 </ul>
-
             </div>
         </div>
     );
