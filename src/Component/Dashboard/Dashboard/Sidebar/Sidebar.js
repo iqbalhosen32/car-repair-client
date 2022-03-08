@@ -13,9 +13,10 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState([]);
     const [isModerator, setIsModerator] = useState([]);
 
-    // console.log(isAdmin)
+    console.log(isAdmin)
+    console.log(isModerator)
 
-    
+
 
     useEffect(() => {
         fetch('http://localhost:5000/isAdmin', {
@@ -46,7 +47,7 @@ const Sidebar = () => {
             })
     }, [])
 
-    
+
 
     return (
         <div className="sidebar d-flex flex-column">

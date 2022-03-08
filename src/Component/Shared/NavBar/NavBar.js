@@ -1,8 +1,9 @@
 import { signOut } from 'firebase/auth';
 import React, { useContext } from 'react';
-import { UserContext } from '../../../App';
 import { auth } from '../../Login/Login/firebase.config';
 import "./NavBar.css"
+import { UserContext } from './../../../App';
+
 
 const NavBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)

@@ -6,7 +6,7 @@ import maintenance from '../../../Images/maintenance.jpg';
 import engineRepair from '../../../Images/istockphoto-1284285153-170667a.jpg';
 
 const Services = ({services}) => {
-    console.log(services)
+    // console.log(services)
     // const services = [
     //     {
     //         serviceName: 'Break Repair',

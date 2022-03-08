@@ -19,6 +19,10 @@ import MakeAdmin from './Component/MakeAdmin/MakeAdmin/MakeAdmin';
 import AdminList from './Component/AdminList/AdminList/AdminList';
 import AddModaretor from './Component/AddModaretor/AddModaretor/AddModaretor';
 import ModeratorList from './Component/ModeratorList/ModeratorList/ModeratorList';
+import PrivateOutlet from './Component/PrivateOutlet/PrivateOutlet';
+import PrivateOutletModerator from './Component/PrivateOutlet/PrivateOutletModerator';
+import PrivateOutletAdmin from './Component/PrivateOutlet/PrivateOutletAdmin';
+import PrivateOutletAM from './Component/PrivateOutlet/PrivateOutletAM';
 
 export const UserContext = createContext();
 
@@ -82,22 +86,32 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <div className="container">
-        <Router>
-          <Routes>
-            <Route path='/' element={<Home services={services} />} />
-            <Route path='/home' element={<Home services={services} />} />
-            <Route path='/service-booking' element={<ServiceBooking services={services} />} />
+        {/* <Router> */}
+        <Routes>
+          <Route path='/' element={<Home services={services} />} />
+          <Route path='/home' element={<Home services={services} />} />
+          <Route path='/service-booking' element={<ServiceBooking services={services} />} />
+          <Route element={<PrivateOutlet />}>
             <Route path='/dashboard' element={<Dashboard bookListByEmail={bookListByEmail} />} />
-            <Route path='/booking-list' element={<BookingList bookListByEmail={bookListByEmail} />} />
+          </Route>
+
+          
+          <Route element={<PrivateOutletAM />}>
             <Route path='/add-new-service' element={<AddService />} />
-            <Route path='/review' element={<Review />} />
-            <Route path='/login' element={<Login />} />
+            <Route path='/booking-list' element={<BookingList bookListByEmail={bookListByEmail} />} />
+          </Route>
+
+          <Route element={<PrivateOutletAdmin />}>
             <Route path='/make-admin' element={<MakeAdmin />} />
             <Route path='/admin-list' element={<AdminList />} />
             <Route path='/add-moderator' element={<AddModaretor />} />
             <Route path='/moderator-list' element={<ModeratorList />} />
-          </Routes>
-        </Router>
+          </Route>
+
+          <Route path='/review' element={<Review />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
+        {/* </Router> */}
       </div>
     </UserContext.Provider>
   );
