@@ -10,7 +10,7 @@ const AdminList = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/admin-list')
+        fetch('https://damp-woodland-01066.herokuapp.com/admin-list')
             .then(res => res.json())
             .then(data => {
                 setAdmins(data)
@@ -18,7 +18,7 @@ const AdminList = () => {
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete-admin/${id}`, {
+        fetch(`https://damp-woodland-01066.herokuapp.com/delete-admin/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

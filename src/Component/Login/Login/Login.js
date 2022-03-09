@@ -1,6 +1,6 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './Login.css';
-import { signOut, GoogleAuthProvider, signInWithPopup, reload } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from './firebase.config';
 import { UserContext } from '../../../App';
 import NavBar from '../../Shared/NavBar/NavBar';
@@ -8,7 +8,8 @@ import NavBar from '../../Shared/NavBar/NavBar';
 
 
 const Login = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    
 
     const provider = new GoogleAuthProvider();
 
@@ -29,6 +30,7 @@ const Login = () => {
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
+                // refreshPage()
                 refreshPage()
                 // ...
             }).catch((error) => {

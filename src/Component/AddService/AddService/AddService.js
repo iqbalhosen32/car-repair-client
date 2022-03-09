@@ -22,7 +22,7 @@ const AddService = () => {
         formData.append('file', file)
         formData.append('serviceName', info.serviceName)
 
-        const url = `http://localhost:5000/addNewService`;
+        const url = `https://damp-woodland-01066.herokuapp.com/addNewService`;
 
         fetch(url, {
             method: 'POST',

@@ -11,7 +11,7 @@ const MakeAdmin = () => {
     }
 
     const onSubmit = data => {
-        fetch('http://localhost:5000/make-admin', {
+        fetch('https://damp-woodland-01066.herokuapp.com/make-admin', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

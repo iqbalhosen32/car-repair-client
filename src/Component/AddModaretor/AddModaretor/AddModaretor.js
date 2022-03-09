@@ -10,7 +10,7 @@ const AddModaretor = () => {
     }
 
     const onSubmit = data => {
-        fetch('http://localhost:5000/add-moderator', {
+        fetch('https://damp-woodland-01066.herokuapp.com/add-moderator', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

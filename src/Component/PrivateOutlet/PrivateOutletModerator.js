@@ -4,7 +4,7 @@ import { Navigate, Outlet } from "react-router-dom";
 export default function PrivateOutletModerator() {
     const [isModerator, setIsModerator] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/isModerator', {
+        fetch('https://damp-woodland-01066.herokuapp.com/isModerator', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

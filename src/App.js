@@ -20,7 +20,6 @@ import AdminList from './Component/AdminList/AdminList/AdminList';
 import AddModaretor from './Component/AddModaretor/AddModaretor/AddModaretor';
 import ModeratorList from './Component/ModeratorList/ModeratorList/ModeratorList';
 import PrivateOutlet from './Component/PrivateOutlet/PrivateOutlet';
-import PrivateOutletModerator from './Component/PrivateOutlet/PrivateOutletModerator';
 import PrivateOutletAdmin from './Component/PrivateOutlet/PrivateOutletAdmin';
 import PrivateOutletAM from './Component/PrivateOutlet/PrivateOutletAM';
 
@@ -38,7 +37,7 @@ function App() {
 
 
   useEffect(() => {
-    const url = `http://localhost:5000/booking-list-by-email`;
+    const url = `https://damp-woodland-01066.herokuapp.com/booking-list-by-email`;
     fetch(url, {
       method: 'POST',
       headers: {
@@ -65,13 +64,13 @@ function App() {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/allServices')
+    fetch('https://damp-woodland-01066.herokuapp.com/allServices')
       .then(res => res.json())
       .then(data => setServices(data))
   }, [])
 
   useEffect(() => {
-    const url = `http://localhost:5000/booking-list-by-email`;
+    const url = `https://damp-woodland-01066.herokuapp.com/booking-list-by-email`;
     fetch(url, {
       method: 'POST',
       headers: {

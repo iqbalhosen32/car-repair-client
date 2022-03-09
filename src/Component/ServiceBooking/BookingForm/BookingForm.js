@@ -25,7 +25,7 @@ const BookingForm = ({ modalIsOpen, closeModal, serviceName, value }) => {
         data.date = value;
         data.createdDate = new Date()
         console.log(data)
-        const url = `http://localhost:5000/bookService`;
+        const url = `https://damp-woodland-01066.herokuapp.com/bookService`;
         fetch(url, {
             method: 'POST',
             headers: {

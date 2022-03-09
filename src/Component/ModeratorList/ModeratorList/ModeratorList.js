@@ -10,7 +10,7 @@ const ModeratorList = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/moderator-list')
+        fetch('https://damp-woodland-01066.herokuapp.com/moderator-list')
             .then(res => res.json())
             .then(data => {
                 setModerators(data)
@@ -18,7 +18,7 @@ const ModeratorList = () => {
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete-moderator/${id}`, {
+        fetch(`https://damp-woodland-01066.herokuapp.com/delete-moderator/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -25,7 +25,7 @@ const Review = () => {
         formData.append('designation', info.designation)
         formData.append('description', info.description)
 
-        const url = `http://localhost:5000/addReview`;
+        const url = `https://damp-woodland-01066.herokuapp.com/addReview`;
         fetch(url, {
             method: 'POST',
             body: formData

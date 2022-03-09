@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import { useLocation, Navigate, Outlet } from "react-router-dom";
 
 export default function PrivateOutletAM() {
     const [isModerator, setIsModerator] = useState([]);
     const [isAdmin, setIsAdmin] = useState([]);
 
+    const location = useLocation()
+
     useEffect(() => {
-        fetch('http://localhost:5000/isAdmin', {
+        fetch('https://damp-woodland-01066.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -19,7 +21,7 @@ export default function PrivateOutletAM() {
             })
     }, [])
     useEffect(() => {
-        fetch('http://localhost:5000/isModerator', {
+        fetch('https://damp-woodland-01066.herokuapp.com/isModerator', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,5 +35,5 @@ export default function PrivateOutletAM() {
             })
     }, [])
 
-    return isModerator || isAdmin ? <Outlet /> : <Navigate to="/login" />;
+    return isModerator || isAdmin ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace/>;
 }
