@@ -13,8 +13,8 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState([]);
     const [isModerator, setIsModerator] = useState([]);
 
-    console.log(isAdmin)
-    console.log(isModerator)
+    // console.log(isAdmin)
+    // console.log(isModerator)
 
 
 

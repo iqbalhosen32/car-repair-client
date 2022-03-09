@@ -8,7 +8,7 @@ const ServiceHeader = ({ services }) => {
     const [value, onChange] = useState(new Date());
 
 
-    console.log(services)
+    // console.log(services)
     return (
         <div>
             <div className="d-flex serviceHeader p-5 justify-content-center align-items-center">

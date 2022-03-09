@@ -20,11 +20,11 @@ const customStyles = {
 const BookingForm = ({ modalIsOpen, closeModal, serviceName, value }) => {
     const { handleSubmit, register } = useForm();
     const onSubmit = (data) => {
-        console.log(data)
+        // console.log(data)
         data.serviceName = serviceName;
         data.date = value;
         data.createdDate = new Date()
-        console.log(data)
+        // console.log(data)
         const url = `https://damp-woodland-01066.herokuapp.com/bookService`;
         fetch(url, {
             method: 'POST',

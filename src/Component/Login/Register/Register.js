@@ -7,7 +7,7 @@ import useAuth from './../../../hooks/useAuth';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
-    console.log(loginData)
+    // console.log(loginData)
     const navigate = useNavigate();
     const { user, registerUser, isLoading, authError } = useAuth();
 

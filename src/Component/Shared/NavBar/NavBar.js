@@ -15,7 +15,7 @@ const NavBar = () => {
         signOut(auth).then(() => {
             // Sign-out successful.
             sessionStorage.clear('email')
-            console.log('Sign-out successful')
+            // console.log('Sign-out successful')
             refreshPage()
         }).catch((error) => {
             // An error happened.

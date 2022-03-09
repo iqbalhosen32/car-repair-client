@@ -4,7 +4,7 @@ import { UserContext } from './../../../App';
 
 const NavBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-    console.log(loggedInUser)
+    // console.log(loggedInUser)
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light" style={{ background: '#262626' }}>
